@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Example for server virtualization
+  config.vm.define "server_vm" do |server|
+    server.vm.box = "ubuntu/trusty64"
+    server.vm.provider "virtualbox" do |vb|
+      vb.name = "ServerVirtualization_VM"
+      vb.memory = "1024"
+    end
+  end
+
+  # This is a simplified example. For network, storage, and desktop virtualization,
+  # specific configurations depend on the tools and technologies used for each type.
+  # These configurations might include network settings, shared storage options, or desktop access configurations.
+end
